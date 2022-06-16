@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&');
 
-:root{
-    --violet:#9356DC;
-    --rose:#FF79DA ;
-    --cyan:#99E2D0 ;
+:root {
+    --violet: #9356DC;
+    --rose: #FF79DA;
+    --cyan: #99E2D0;
+    --transition-time: 0.3s;
     ;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto';
 }
 
-h1{
+h1 {
     font-family: 'Shrikhand';
 }
 
@@ -29,11 +30,11 @@ h1{
 
 /* Header*/
 
-.fontLogo{
+.fontLogo {
     font-family: 'Shrikhand';
 }
 
-.boxLogo{
+.boxLogo {
     padding: 15px;
     margin: 0 auto;
     text-align: center;
@@ -41,48 +42,48 @@ h1{
 }
 
 
-.logo{
+.logo {
     margin: 0 auto;
     display: flex;
 }
 
 /* Footer*/
 
-footer{
+footer {
     background-color: #353535;
     color: white;
     padding: 30px;
 }
 
-.fontLogo2{
+.fontLogo2 {
     font-family: 'Shrikhand';
     font-size: 20px;
     margin-bottom: 20px;
-    }
+}
 
-footer li{
+footer li {
     list-style: none;
     margin-top: 5px;
     display: flex;
     margin-bottom: 10px;
 }
 
-footer li i{
+footer li i {
     margin-right: 10px;
 }
 
-footer li p{  
+footer li p {
     position: absolute;
     left: 60px;
 }
 
 
-footer a{
+footer a {
     text-decoration: none;
     color: white;
 }
 
-footer a:link{
+footer a:link {
     text-decoration: none;
     color: white;
 }
@@ -91,15 +92,70 @@ footer a:link{
 ------PAGE INDEX------
 ---------------------*/
 
+/* Loader spinner*/
+ .Overlay {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(39, 37, 37, 0.5);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: disappear 3s forwards;
+} 
+
+.loader {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 4px solid #240229;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: -5px -5px 5px rgba(255, 255, 255, 0.1),
+        10px 10px 10px rgba(0, 0, 0, 0.4),
+        inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+        inset 10px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.loader:before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    bottom: 25px;
+    z-index: 10;
+    background: #282828;
+    border-radius: 50%;
+    border: 2px solid #240229;
+    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.2),
+        inset 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.loader span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: linear-gradient(-225deg,
+            #ff79da 0%,
+            #9356dc 100%);
+    filter: blur(20px);
+    z-index: -1;
+    animation: animate 0.5s linear infinite;
+} */
+
+
 /* Recherches et réservations*/
 
-.container{
+.container {
     height: auto;
     display: flex;
     flex-direction: column;
 }
 
-.box1{
+.box1 {
     background-color: #EAEAEA;
     height: 50px;
     width: 100%;
@@ -109,22 +165,22 @@ footer a:link{
     align-items: center;
 }
 
-.box1 form{
+.box1 form {
     font-size: 26px;
 }
 
-.box1 i{
+.box1 i {
     margin: 15px;
     margin-left: 0;
 }
 
-.box1 p{
-   border: none;
-   background-color: transparent;
-   font-weight: bolder;
+.box1 p {
+    border: none;
+    background-color: transparent;
+    font-weight: bolder;
 }
 
-.box2{
+.box2 {
     background-color: #F6F6F6;
     height: 250px;
     padding: 30px;
@@ -132,34 +188,39 @@ footer a:link{
     justify-content: space-around;
 }
 
-.box2 h1{
+.box2 h1 {
     padding: 0 20px;
     margin-bottom: 10px;
 }
- 
 
-.box2 button{
+
+.box2 button {
     margin: 0 auto;
     margin-top: 30px;
-    padding:15px;
-    background: linear-gradient(to bottom,  #ff79da 0%,#9356dc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    padding: 15px;
+    background: linear-gradient(to bottom, #ff79da 0%, #9356dc 100%);
     color: white;
     border: none;
     border-radius: 20px;
 }
 
-/* Section "Fonctionnement"*/
-
-.container2{
-padding: 20px;
+.box2 button:hover {
+    background-color: #ff79da;
+    cursor: pointer;
 }
 
-.box3{
+/* Section "Fonctionnement"*/
+
+.container2 {
+    padding: 20px;
+}
+
+.box3 {
     margin: 10px;
     margin-bottom: 20px;
 }
 
-.box4{
+.box4 {
     margin: 0 auto;
     margin-bottom: 20px;
     display: flex;
@@ -172,37 +233,37 @@ padding: 20px;
     box-shadow: 0px 10px 10px #E9E9E9;
 }
 
-.box4:hover{
+.box4:hover {
     background-color: #F5EDFF;
     cursor: pointer;
 }
 
-.box4:hover i{
+.box4:hover i {
     background-color: #F5EDFF;
     color: var(--violet) !important;
 }
 
-.box4 i{
+.box4 i {
     margin-left: 10px;
     font-size: 24px;
     color: #7a7a7a;
 }
 
-.box4:first-of-type p{
-position: relative;
-left: 10px;
+.box4:first-of-type p {
+    position: relative;
+    left: 10px;
 }
 
-.box4 p{
+.box4 p {
     margin-left: 25px;
     font-weight: bolder;
-    font-size: 18px;  
+    font-size: 18px;
 }
 
-.badge{
+.badge {
     background-color: var(--violet);
     color: white;
-    padding:5px 10px;
+    padding: 5px 10px;
     border-radius: 20px;
     position: relative;
     left: -15px;
@@ -210,27 +271,27 @@ left: 10px;
 
 /* Section "Restaurants"*/
 
-.container3{
+.container3 {
     height: auto;
     display: flex;
     flex-direction: column;
-    background-color:#F6F6F6 ;
+    background-color: #F6F6F6;
     margin-top: 20px;
     padding: 20px;
 }
 
-.card{
+.card {
     height: 250px;
     width: 97%;
     margin: 0 auto;
     background: white;
-    border-radius: 20px;;
+    border-radius: 20px;
     margin-bottom: 20px;
     position: relative;
 }
 
 
-.sticker{
+.sticker {
     max-width: 80px;
     padding: 5px;
     position: absolute;
@@ -241,7 +302,8 @@ left: 10px;
     background-color: var(--cyan);
     text-align: center;
 }
-.card img{
+
+.card img {
     height: 70%;
     width: 100%;
     object-fit: cover;
@@ -249,56 +311,80 @@ left: 10px;
     border-radius: 20px 20px 0 0PX;
 }
 
-.card-band{
+.card-band {
     display: flex;
-justify-content: space-between;
-margin: 10px;
+    justify-content: space-between;
+    margin: 10px;
 }
 
-.card-band h3{
+.card-band h3 {
     margin-bottom: 5px;
 }
 
-.card-band .heart1{
-font-size: 24px;
+.card-band .heart1 {
+    font-size: 24px;
 }
 
-.card-band .heart2{
+.card-band .heart2 {
     font-size: 24px;
     display: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-    
-.card-band .bloc-heart:hover .heart1{
+
+.card-band .bloc-heart:hover .heart1 {
     display: none;
 }
 
-.card-band .bloc-heart:hover .heart2{
+.card-band .bloc-heart:hover .heart2 {
     display: block;
     background-clip: text;
-    background-image: linear-gradient(to bottom,  #ff79da 0%,#9356dc 100%);
+    background-image: linear-gradient(to bottom, #FF79DA 0%, #9356dc 100%);
     color: transparent;
     cursor: pointer;
+    animation: appear2 1s;
+    animation-delay: 0;
 }
 
 /*------------------------------------
 ------PAGE MENU "À la française"------
 --------------------------------------*/
 
+/* HEADER*/
+
+.header-menu{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap:20%;
+}
+
+.header-menu i{
+    margin-left: 20px;
+    font-size: 24px;
+    color: black;
+}
+
+.boxLogo{
+    margin: 0 !important;
+}
+
 /* Section TOP*/
 
-.bg-top{
+.bg-main img {
     height: 200px;
     width: 100%;
+    object-fit: cover;
     position: relative;
 }
 
-/* section "Menus"*/
+/* section "Menus"*/ 
 
-.bg-main{
+.bg-main {
     background-color: #F6F6F6;
 }
 
-.container-menu{
+.container-menu {
     width: 100%;
     padding: 10px;
     background-color: #F6F6F6;
@@ -307,7 +393,7 @@ font-size: 24px;
     top: -45PX;
 }
 
-.top-menu{
+.top-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -315,13 +401,36 @@ font-size: 24px;
     margin-left: 10px;
 }
 
-.top-menu i{
+
+.top-menu .heart1 {
     font-size: 22px;
+    margin-right: 15PX;
     font-weight: lighter;
-    margin-right: 20PX;
 }
 
-.container-menu h3{
+.top-menu .heart2 {
+    font-size: 24px;
+    margin-right: 15PX;
+    display: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.top-menu .bloc-heart:hover .heart1 {
+    display: none;
+}
+
+.top-menu .bloc-heart:hover .heart2 {
+    display: block;
+    background-clip: text;
+    background-image: linear-gradient(to bottom, #FF79DA 0%, #9356dc 100%);
+    color: transparent;
+    cursor: pointer;
+    animation: appear2 1s;
+    animation-delay: 0;
+}
+
+.container-menu h3 {
     margin-top: 30px;
     margin-left: 10px;
     padding-bottom: 4px;
@@ -330,11 +439,11 @@ font-size: 24px;
     font-size: 16px;
 }
 
-.container-menu h4{
+.container-menu h4 {
     font-size: 18px;
 }
 
-.box-plats{
+.box-plats {
     background-color: white;
     margin-top: 15px;
     border-radius: 20px;
@@ -342,128 +451,190 @@ font-size: 24px;
 }
 
 
-.box-card{
-width: 100%;
-padding: 10px;
+.box-card {
+    width: 100%;
+    padding: 10px;
 }
 
-.plats{
+.box-card h4,
+.box-card p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.plats {
     margin-top: 5px;
     display: flex;
     font-size: 14px;
     justify-content: space-between;
 }
 
-.plats span{
+.plats span {
     font-weight: bolder;
 }
 
-
-.box-check{
+.box-check {
     width: 0px;
     opacity: 0;
     transition: all 250ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.box-plats:hover .plats span{
+.box-plats:hover .plats span {
     font-weight: bolder;
     margin-left: 45%;
 }
 
-.box-plats:hover .box-check{
+.box-plats:hover .box-check {
     width: 15%;
     padding: 10px;
     margin-left: 10px;
     background-color: var(--cyan);
     color: white;
-    display: block;
-    display: flex;
     font-size: 20px;
     border-radius: 0 15px 20px 0;
-    align-items: center;
-    justify-content: center;
     cursor: pointer;
     opacity: 1;
-    
 }
 
-.box-plats:hover .box-check i{
-animation: rotation 1s;
-    
+
+.box-plats:hover .box-check i {
+    animation: rotation 1s;
+
 }
 
-.box-button{ 
-    margin-top: 30px;
+.box-button {
+    margin-bottom: 0px;
     display: flex;
+    justify-content: center;
 }
 
-.button{
-    margin: 0 auto;
-    padding:20px 40px;
-    background: linear-gradient(to bottom,  #ff79da 0%,#9356dc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+.button {
+    margin-bottom: 60px;
+    padding: 20px 40px;
+    background: linear-gradient(to bottom, #ff79da 0%, #9356DC 100%);
     color: white;
     border: none;
     border-radius: 25px;
     font-size: 16PX;
 }
 
+.button:hover {
+    background: var(--rose);
+    font-size: 17px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
 /*--------------------
 --------Animations----- 
 ---------------------*/
 
-.Anim1{
+.Anim1 {
     animation: appear 1s;
     animation-delay: 0;
 }
 
-.Anim2{
+.Anim2 {
     animation: appear 1s;
     animation-delay: 1s;
 }
 
-.Anim3{
+.Anim3 {
     animation: appear 1s;
     animation-delay: 2s;
 }
 
-@keyframes appear{
-    0%{
+@keyframes appear {
+    0% {
         opacity: 0;
         transform: translateY(20px);
     }
 
-    100%{
-        opacity:1;
+    100% {
+        opacity: 1;
         transform: translateY(0px);
     }
 }
 
-@keyframes rotation{
-    0%{
+@keyframes appear2 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes rotation {
+    0% {
         transform: rotate(0deg);
     }
 
-    20%{
+    20% {
         transform: rotate(180deg);
     }
 
-    40%{
+    40% {
         transform: rotate(360deg);
     }
 
-    60%{
+    60% {
         transform: rotate(180deg);
     }
 
-    80%{
+    80% {
         transform: rotate(360deg);
     }
 
-    90%{
+    90% {
         transform: rotate(180deg);
     }
 
-    100%{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    80% { 
+        opacity: 1;
+        z-index: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+
+}
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
         transform: rotate(360deg);
     }
 }
